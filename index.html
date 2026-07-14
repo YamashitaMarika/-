@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>TOPページ</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" aria-label="サイトヘッダー">
+      <a class="logo" href="#hero" aria-label="TOPへ戻る">Brand</a>
+      <nav class="global-nav" aria-label="グローバルナビゲーション">
+        <a href="#features">特徴</a>
+        <a href="#service">サービス</a>
+        <a href="#contact">お問い合わせ</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="hero" class="hero">
+        <div class="hero__content">
+          <p class="eyebrow">Welcome to our website</p>
+          <h1>未来につながる体験を、ここから。</h1>
+          <p class="hero__lead">
+            固定ヘッダーとレスポンシブレイアウトに対応した、シンプルで見やすいTOPページです。
+          </p>
+          <div class="hero__actions">
+            <a class="button button--primary" href="#contact">相談する</a>
+            <a class="button button--secondary" href="#features">詳しく見る</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="features" class="section">
+        <div class="section__heading">
+          <p class="eyebrow">Features</p>
+          <h2>選ばれる理由</h2>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <h3>分かりやすい構成</h3>
+            <p>情報を整理し、初めて訪れるユーザーにも伝わりやすい導線を設計しています。</p>
+          </article>
+          <article class="card">
+            <h3>快適な閲覧体験</h3>
+            <p>画面幅に合わせて余白やレイアウトを調整し、スマートフォンでも読みやすく表示します。</p>
+          </article>
+          <article class="card">
+            <h3>固定ヘッダー</h3>
+            <p>スクロール中でも主要ナビゲーションへすぐアクセスでき、回遊性を高めます。</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="service" class="section section--accent">
+        <div class="split">
+          <div>
+            <p class="eyebrow">Service</p>
+            <h2>ビジネスの魅力を伝えるTOPページ</h2>
+          </div>
+          <p>
+            ファーストビュー、特徴紹介、お問い合わせ導線を備え、公開後の拡張もしやすい静的ページとして作成しています。
+          </p>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact">
+        <p class="eyebrow">Contact</p>
+        <h2>まずはお気軽にご相談ください</h2>
+        <a class="button button--primary" href="mailto:info@example.com">お問い合わせする</a>
+      </section>
+    </main>
+  </body>
+</html>
