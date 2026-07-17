@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ENTRY | TOPページ</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" aria-label="サイトヘッダー">
+      <a class="logo" href="index.html#hero" aria-label="TOPへ戻る">Brand</a>
+      <nav class="global-nav" aria-label="グローバルナビゲーション">
+        <a href="index.html">TOP</a>
+        <a href="interview.html">INTERVIEW</a>
+        <a href="entry.html" aria-current="page">ENTRY</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-hero">
+        <p class="eyebrow">Entry Form</p>
+        <h1>エントリーフォーム</h1>
+        <p class="hero__lead">以下の項目をご入力のうえ、送信してください。担当者より折り返しご連絡します。</p>
+      </section>
+
+      <section class="section form-section" aria-label="エントリーフォーム">
+        <form class="entry-form" action="#" method="post">
+          <div class="form-grid">
+            <label class="form-field">
+              <span>お名前 <strong>必須</strong></span>
+              <input type="text" name="name" autocomplete="name" required />
+            </label>
+
+            <label class="form-field">
+              <span>メールアドレス <strong>必須</strong></span>
+              <input type="email" name="email" autocomplete="email" required />
+            </label>
+
+            <label class="form-field">
+              <span>電話番号</span>
+              <input type="tel" name="tel" autocomplete="tel" />
+            </label>
+
+            <fieldset class="form-field option-field">
+              <legend>選択項目 <strong>必須</strong></legend>
+              <div class="radio-group" role="radiogroup" aria-label="選択項目">
+                <label class="radio-field">
+                  <input type="radio" name="entryType" value="a" data-entry-option="a" required />
+                  <span>A</span>
+                </label>
+                <label class="radio-field">
+                  <input type="radio" name="entryType" value="b" data-entry-option="b" required />
+                  <span>B</span>
+                </label>
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="form-grid option-inputs" aria-live="polite">
+            <label class="form-field">
+              <span>A 入力欄 <strong>必須</strong></span>
+              <input type="text" name="inputA" data-entry-input="a" disabled />
+            </label>
+
+            <label class="form-field">
+              <span>B 入力欄 <strong>必須</strong></span>
+              <input type="text" name="inputB" data-entry-input="b" disabled />
+            </label>
+          </div>
+
+          <label class="form-field form-field--full">
+            <span>志望動機・自己PR <strong>必須</strong></span>
+            <textarea name="message" rows="7" required></textarea>
+          </label>
+
+          <label class="checkbox-field">
+            <input type="checkbox" name="privacy" required />
+            <span>個人情報の取り扱いに同意します。</span>
+          </label>
+
+          <div class="form-actions">
+            <button class="button button--primary" type="submit">送信する</button>
+            <a class="button button--secondary" href="index.html">TOPへ戻る</a>
+          </div>
+        </form>
+      </section>
+    </main>
+    <script src="entry.js"></script>
+  </body>
+</html>
