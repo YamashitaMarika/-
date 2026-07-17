@@ -285,6 +285,7 @@ h3 {
 .entry-form {
   width: min(100%, 900px);
   margin: 0 auto;
+  text-align: left;
   padding: clamp(24px, 5vw, 48px);
   background: var(--color-surface);
   border: 1px solid rgba(16, 32, 51, 0.08);
@@ -300,9 +301,42 @@ h3 {
 
 .form-field {
   display: grid;
+  text-align: left;
   gap: 8px;
   color: var(--color-text);
   font-weight: 800;
+}
+
+.option-field {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.option-field legend {
+  margin-bottom: 8px;
+}
+
+.radio-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.radio-field {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 48px;
+  padding: 10px 16px;
+  border: 1px solid rgba(16, 32, 51, 0.16);
+  border-radius: 14px;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+.option-inputs {
+  margin-top: 24px;
 }
 
 .form-field strong {
@@ -325,6 +359,12 @@ h3 {
 
 .form-field textarea {
   resize: vertical;
+}
+
+.form-field input:disabled {
+  color: rgba(93, 107, 122, 0.7);
+  background: #eef2f7;
+  cursor: not-allowed;
 }
 
 .form-field input:focus,

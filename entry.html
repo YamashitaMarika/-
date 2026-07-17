@@ -41,15 +41,30 @@
               <input type="tel" name="tel" autocomplete="tel" />
             </label>
 
+            <fieldset class="form-field option-field">
+              <legend>選択項目 <strong>必須</strong></legend>
+              <div class="radio-group" role="radiogroup" aria-label="選択項目">
+                <label class="radio-field">
+                  <input type="radio" name="entryType" value="a" data-entry-option="a" required />
+                  <span>A</span>
+                </label>
+                <label class="radio-field">
+                  <input type="radio" name="entryType" value="b" data-entry-option="b" required />
+                  <span>B</span>
+                </label>
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="form-grid option-inputs" aria-live="polite">
             <label class="form-field">
-              <span>希望職種 <strong>必須</strong></span>
-              <select name="position" required>
-                <option value="">選択してください</option>
-                <option value="designer">デザイナー</option>
-                <option value="engineer">エンジニア</option>
-                <option value="director">ディレクター</option>
-                <option value="other">その他</option>
-              </select>
+              <span>A 入力欄 <strong>必須</strong></span>
+              <input type="text" name="inputA" data-entry-input="a" disabled />
+            </label>
+
+            <label class="form-field">
+              <span>B 入力欄 <strong>必須</strong></span>
+              <input type="text" name="inputB" data-entry-input="b" disabled />
             </label>
           </div>
 
@@ -70,5 +85,6 @@
         </form>
       </section>
     </main>
+    <script src="entry.js"></script>
   </body>
 </html>
