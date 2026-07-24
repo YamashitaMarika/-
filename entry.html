@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ENTRY | TOPページ</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" aria-label="サイトヘッダー">
+      <a class="logo" href="index.html#hero" aria-label="TOPへ戻る">Brand</a>
+      <nav class="global-nav" aria-label="グローバルナビゲーション">
+        <a href="index.html">TOP</a>
+        <a href="interview.html">INTERVIEW</a>
+        <a href="business.html">BUSINESS</a>
+        <a href="company.html">COMPANY</a>
+        <a href="entry.html" aria-current="page">ENTRY</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="entry-page" aria-label="エントリーフォーム">
+        <form class="entry-form entry-form--wide" action="thanks.html" method="get">
+          <div class="entry-selector" aria-label="フォーム種別の選択">
+            <p>ご選択ください</p>
+            <span aria-hidden="true">▼</span>
+            <div class="entry-selector__buttons">
+              <label>
+                <input type="radio" name="entryType" value="recruit" data-entry-option="recruit" checked />
+                <span>大工 採用エントリー</span>
+              </label>
+              <label>
+                <input type="radio" name="entryType" value="partner" data-entry-option="partner" />
+                <span>協力会社様 お問い合わせ</span>
+              </label>
+            </div>
+          </div>
+
+          <fieldset class="entry-panel" data-entry-panel="recruit">
+            <legend>大工 採用エントリー</legend>
+
+            <div class="entry-field">
+              <span class="entry-label">募集対象工事種（複数選択可）</span>
+              <div class="trade-options">
+                <label><input type="checkbox" name="trade" value="大工工事" /> <span>大工工事</span></label>
+                <label><input type="checkbox" name="trade" value="造作工事" /> <span>造作工事</span></label>
+                <label><input type="checkbox" name="trade" value="木工工事・木工事" /> <span>木工工事・木工事</span></label>
+              </div>
+            </div>
+
+            <label class="entry-field">
+              <span class="entry-label">氏名</span>
+              <input type="text" name="recruitName" autocomplete="name" required />
+            </label>
+
+            <label class="entry-field">
+              <span class="entry-label">電話番号</span>
+              <input type="tel" name="recruitTel" autocomplete="tel" required />
+            </label>
+
+            <label class="entry-field">
+              <span class="entry-label">メールアドレス</span>
+              <input type="email" name="recruitEmail" autocomplete="email" required />
+            </label>
+
+            <label class="entry-field">
+              <span class="entry-label">履歴書・職務経歴書の添付</span>
+              <input type="file" name="resume" />
+            </label>
+
+            <label class="entry-field">
+              <span class="entry-label">その他</span>
+              <textarea name="recruitMessage" rows="7"></textarea>
+            </label>
+          </fieldset>
+
+          <fieldset class="entry-panel" data-entry-panel="partner">
+            <legend>協力会社様 お問い合わせ</legend>
+
+            <label class="entry-field">
+              <span class="entry-label">会社名</span>
+              <input type="text" name="companyName" autocomplete="organization" required />
+            </label>
+
+            <label class="entry-field">
+              <span class="entry-label">氏名</span>
+              <input type="text" name="partnerName" autocomplete="name" required />
+            </label>
+
+            <label class="entry-field">
+              <span class="entry-label">電話番号</span>
+              <input type="tel" name="partnerTel" autocomplete="tel" required />
+            </label>
+
+            <label class="entry-field">
+              <span class="entry-label">メールアドレス</span>
+              <input type="email" name="partnerEmail" autocomplete="email" required />
+            </label>
+
+            <label class="entry-field">
+              <span class="entry-label">お問い合わせ内容</span>
+              <textarea name="partnerMessage" rows="7" required></textarea>
+            </label>
+          </fieldset>
+
+          <div class="entry-submit">
+            <button type="submit">送信</button>
+          </div>
+        </form>
+      </section>
+    </main>
+    <script src="entry.js"></script>
+  </body>
+</html>
