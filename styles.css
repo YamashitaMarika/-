@@ -604,8 +604,18 @@ h3 {
   border-radius: 0;
   box-shadow: none;
   color: #10298f;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: kozuka-gothic-pro, sans-serif;
   background: transparent;
+}
+
+.entry-form--wide input,
+.entry-form--wide textarea,
+.entry-form--wide button,
+.entry-form--wide label,
+.entry-form--wide legend,
+.entry-form--wide span,
+.entry-form--wide p {
+  font-family: kozuka-gothic-pro, sans-serif;
 }
 
 .entry-selector {
