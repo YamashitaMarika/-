@@ -1,22 +1,28 @@
 const optionRadios = document.querySelectorAll('[data-entry-option]');
-const optionInputs = document.querySelectorAll('[data-entry-input]');
+const entryPanels = document.querySelectorAll('[data-entry-panel]');
 
-function updateOptionInputs() {
+function updateEntryPanels() {
   const selectedOption = document.querySelector('[data-entry-option]:checked')?.value;
 
-  optionInputs.forEach((input) => {
-    const isSelected = input.dataset.entryInput === selectedOption;
-    input.disabled = !isSelected;
-    input.required = isSelected;
+  entryPanels.forEach((panel) => {
+    const isSelected = panel.dataset.entryPanel === selectedOption;
+    panel.hidden = !isSelected;
 
-    if (!isSelected) {
-      input.value = '';
-    }
+    panel.querySelectorAll('input, select, textarea, button').forEach((control) => {
+      const wasRequired = control.dataset.required === 'true' || control.required;
+
+      if (wasRequired) {
+        control.dataset.required = 'true';
+      }
+
+      control.disabled = !isSelected;
+      control.required = isSelected && control.dataset.required === 'true';
+    });
   });
 }
 
 optionRadios.forEach((radio) => {
-  radio.addEventListener('change', updateOptionInputs);
+  radio.addEventListener('change', updateEntryPanels);
 });
 
-updateOptionInputs();
+updateEntryPanels();
